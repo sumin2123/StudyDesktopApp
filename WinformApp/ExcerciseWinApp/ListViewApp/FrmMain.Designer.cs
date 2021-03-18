@@ -29,17 +29,21 @@ namespace ListViewApp
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmMain));
             this.RdbDetails = new System.Windows.Forms.RadioButton();
             this.RdbList = new System.Windows.Forms.RadioButton();
             this.RdbSmallIcon = new System.Windows.Forms.RadioButton();
-            this.RdbLargeIcon = new System.Windows.Forms.RadioButton();
-            this.LsvProducts = new System.Windows.Forms.ListView();
+            this.ImgSmallIcon = new System.Windows.Forms.ImageList(this.components);
             this.label1 = new System.Windows.Forms.Label();
             this.TxtSelected = new System.Windows.Forms.TextBox();
-            this.제품명 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.단가 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.ImgLargeIcon = new System.Windows.Forms.ImageList(this.components);
+            this.RdbLargeIcon = new System.Windows.Forms.RadioButton();
             this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.LsvProducts = new System.Windows.Forms.ListView();
             this.SuspendLayout();
             // 
             // RdbDetails
@@ -50,6 +54,7 @@ namespace ListViewApp
             this.RdbDetails.Name = "RdbDetails";
             this.RdbDetails.Size = new System.Drawing.Size(73, 19);
             this.RdbDetails.TabIndex = 0;
+            this.RdbDetails.TabStop = true;
             this.RdbDetails.Text = "자세히";
             this.RdbDetails.UseVisualStyleBackColor = true;
             this.RdbDetails.CheckedChanged += new System.EventHandler(this.RdbDetails_CheckedChanged);
@@ -62,6 +67,7 @@ namespace ListViewApp
             this.RdbList.Name = "RdbList";
             this.RdbList.Size = new System.Drawing.Size(73, 19);
             this.RdbList.TabIndex = 1;
+            this.RdbList.TabStop = true;
             this.RdbList.Text = "리스트";
             this.RdbList.UseVisualStyleBackColor = true;
             this.RdbList.CheckedChanged += new System.EventHandler(this.RdbList_CheckedChanged);
@@ -79,37 +85,15 @@ namespace ListViewApp
             this.RdbSmallIcon.UseVisualStyleBackColor = true;
             this.RdbSmallIcon.CheckedChanged += new System.EventHandler(this.RdbSmallIcon_CheckedChanged);
             // 
-            // RdbLargeIcon
+            // ImgSmallIcon
             // 
-            this.RdbLargeIcon.AutoSize = true;
-            this.RdbLargeIcon.Location = new System.Drawing.Point(525, 17);
-            this.RdbLargeIcon.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.RdbLargeIcon.Name = "RdbLargeIcon";
-            this.RdbLargeIcon.Size = new System.Drawing.Size(88, 19);
-            this.RdbLargeIcon.TabIndex = 3;
-            this.RdbLargeIcon.TabStop = true;
-            this.RdbLargeIcon.Text = "큰아이콘";
-            this.RdbLargeIcon.UseVisualStyleBackColor = true;
-            this.RdbLargeIcon.CheckedChanged += new System.EventHandler(this.RdbLargeIcon_CheckedChanged);
-            // 
-            // LsvProducts
-            // 
-            this.LsvProducts.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.제품명,
-            this.단가,
-            this.columnHeader1,
-            this.columnHeader2});
-            this.LsvProducts.FullRowSelect = true;
-            this.LsvProducts.GridLines = true;
-            this.LsvProducts.HideSelection = false;
-            this.LsvProducts.Location = new System.Drawing.Point(12, 48);
-            this.LsvProducts.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.LsvProducts.Name = "LsvProducts";
-            this.LsvProducts.Size = new System.Drawing.Size(685, 299);
-            this.LsvProducts.TabIndex = 4;
-            this.LsvProducts.UseCompatibleStateImageBehavior = false;
-            this.LsvProducts.View = System.Windows.Forms.View.Details;
-            this.LsvProducts.SelectedIndexChanged += new System.EventHandler(this.LsvProducts_SelectedIndexChanged);
+            this.ImgSmallIcon.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("ImgSmallIcon.ImageStream")));
+            this.ImgSmallIcon.TransparentColor = System.Drawing.Color.Transparent;
+            this.ImgSmallIcon.Images.SetKeyName(0, "controller.png");
+            this.ImgSmallIcon.Images.SetKeyName(1, "ds.png");
+            this.ImgSmallIcon.Images.SetKeyName(2, "ps4.png");
+            this.ImgSmallIcon.Images.SetKeyName(3, "remote.png");
+            this.ImgSmallIcon.Images.SetKeyName(4, "xbox.png");
             // 
             // label1
             // 
@@ -127,28 +111,72 @@ namespace ListViewApp
             this.TxtSelected.Size = new System.Drawing.Size(367, 25);
             this.TxtSelected.TabIndex = 6;
             // 
-            // 제품명
+            // ImgLargeIcon
             // 
-            this.제품명.Text = "제품명";
-            this.제품명.Width = 207;
+            this.ImgLargeIcon.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("ImgLargeIcon.ImageStream")));
+            this.ImgLargeIcon.TransparentColor = System.Drawing.Color.Transparent;
+            this.ImgLargeIcon.Images.SetKeyName(0, "controller.png");
+            this.ImgLargeIcon.Images.SetKeyName(1, "ds.png");
+            this.ImgLargeIcon.Images.SetKeyName(2, "ps4.png");
+            this.ImgLargeIcon.Images.SetKeyName(3, "remote.png");
+            this.ImgLargeIcon.Images.SetKeyName(4, "xbox.png");
             // 
-            // 단가
+            // RdbLargeIcon
             // 
-            this.단가.Text = "단가";
-            this.단가.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.단가.Width = 138;
+            this.RdbLargeIcon.AutoSize = true;
+            this.RdbLargeIcon.Location = new System.Drawing.Point(525, 17);
+            this.RdbLargeIcon.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.RdbLargeIcon.Name = "RdbLargeIcon";
+            this.RdbLargeIcon.Size = new System.Drawing.Size(88, 19);
+            this.RdbLargeIcon.TabIndex = 3;
+            this.RdbLargeIcon.TabStop = true;
+            this.RdbLargeIcon.Text = "큰아이콘";
+            this.RdbLargeIcon.UseVisualStyleBackColor = true;
+            this.RdbLargeIcon.CheckedChanged += new System.EventHandler(this.RdbLargeIcon_CheckedChanged);
             // 
             // columnHeader1
             // 
-            this.columnHeader1.Text = "수량";
-            this.columnHeader1.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.columnHeader1.Width = 128;
+            this.columnHeader1.Text = "제품명";
+            this.columnHeader1.Width = 207;
             // 
             // columnHeader2
             // 
-            this.columnHeader2.Text = "금액";
+            this.columnHeader2.Text = "단가";
             this.columnHeader2.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.columnHeader2.Width = 125;
+            this.columnHeader2.Width = 138;
+            // 
+            // columnHeader3
+            // 
+            this.columnHeader3.Text = "수량";
+            this.columnHeader3.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.columnHeader3.Width = 128;
+            // 
+            // columnHeader4
+            // 
+            this.columnHeader4.Text = "금액";
+            this.columnHeader4.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.columnHeader4.Width = 125;
+            // 
+            // LsvProducts
+            // 
+            this.LsvProducts.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.columnHeader1,
+            this.columnHeader2,
+            this.columnHeader3,
+            this.columnHeader4});
+            this.LsvProducts.FullRowSelect = true;
+            this.LsvProducts.GridLines = true;
+            this.LsvProducts.HideSelection = false;
+            this.LsvProducts.LargeImageList = this.ImgLargeIcon;
+            this.LsvProducts.Location = new System.Drawing.Point(12, 48);
+            this.LsvProducts.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.LsvProducts.Name = "LsvProducts";
+            this.LsvProducts.Size = new System.Drawing.Size(685, 299);
+            this.LsvProducts.SmallImageList = this.ImgSmallIcon;
+            this.LsvProducts.TabIndex = 4;
+            this.LsvProducts.UseCompatibleStateImageBehavior = false;
+            this.LsvProducts.View = System.Windows.Forms.View.Details;
+            this.LsvProducts.SelectedIndexChanged += new System.EventHandler(this.LsvProducts_SelectedIndexChanged);
             // 
             // FrmMain
             // 
@@ -178,14 +206,16 @@ namespace ListViewApp
         private System.Windows.Forms.RadioButton RdbDetails;
         private System.Windows.Forms.RadioButton RdbList;
         private System.Windows.Forms.RadioButton RdbSmallIcon;
-        private System.Windows.Forms.RadioButton RdbLargeIcon;
-        private System.Windows.Forms.ListView LsvProducts;
-        private System.Windows.Forms.ColumnHeader 제품명;
-        private System.Windows.Forms.ColumnHeader 단가;
-        private System.Windows.Forms.ColumnHeader columnHeader1;
-        private System.Windows.Forms.ColumnHeader columnHeader2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox TxtSelected;
+        private System.Windows.Forms.ImageList ImgSmallIcon;
+        private System.Windows.Forms.ImageList ImgLargeIcon;
+        private System.Windows.Forms.RadioButton RdbLargeIcon;
+        private System.Windows.Forms.ColumnHeader columnHeader1;
+        private System.Windows.Forms.ColumnHeader columnHeader2;
+        private System.Windows.Forms.ColumnHeader columnHeader3;
+        private System.Windows.Forms.ColumnHeader columnHeader4;
+        private System.Windows.Forms.ListView LsvProducts;
     }
 }
 

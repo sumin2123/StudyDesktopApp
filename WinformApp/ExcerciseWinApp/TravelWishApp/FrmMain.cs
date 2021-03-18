@@ -16,8 +16,7 @@ namespace TravelWishApp
         {
             InitializeComponent();
         }
-
-        private void FrmMain_Load(object sender, EventArgs e)
+        private void FrmMain_Load_1(object sender, EventArgs e)
         {
             LsbWishCountry.Items.AddRange(new string[] {
                 "오스트리아, 빈",
@@ -33,16 +32,16 @@ namespace TravelWishApp
                 "대한민국, 서울"
             });
             LsbResult.SelectionMode = SelectionMode.MultiExtended;
-
         }
 
-        private void BtnAdd_Click(object sender, EventArgs e)
+        private void buttoBtnAddn1_Click(object sender, EventArgs e)
         {
             foreach (var item in LsbWishCountry.CheckedItems)
             {
                 LsbResult.Items.Add(item);
             }
         }
+
 
         private void BtnAddAll_Click(object sender, EventArgs e)
         {
@@ -75,3 +74,4 @@ namespace TravelWishApp
         }
     }
 }
+
