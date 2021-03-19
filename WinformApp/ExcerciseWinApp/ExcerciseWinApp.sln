@@ -19,6 +19,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AlarmClockApp", "AlarmClock
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ListboxWinApp", "RestaurentSelApp\ListboxWinApp.csproj", "{194DD2D2-F15E-462C-A203-1DB1AC58785A}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MoviePlayerApp", "MoviePlayerApp\MoviePlayerApp.csproj", "{385DD9C6-2267-49DA-90FA-EF87C2D616B1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimpleGraphiEditor", "SimpleGraphiEditor\SimpleGraphiEditor.csproj", "{3B0FC34C-77F9-45FA-8142-F2C39630502D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -57,6 +61,14 @@ Global
 		{194DD2D2-F15E-462C-A203-1DB1AC58785A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{194DD2D2-F15E-462C-A203-1DB1AC58785A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{194DD2D2-F15E-462C-A203-1DB1AC58785A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{385DD9C6-2267-49DA-90FA-EF87C2D616B1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{385DD9C6-2267-49DA-90FA-EF87C2D616B1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{385DD9C6-2267-49DA-90FA-EF87C2D616B1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{385DD9C6-2267-49DA-90FA-EF87C2D616B1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3B0FC34C-77F9-45FA-8142-F2C39630502D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3B0FC34C-77F9-45FA-8142-F2C39630502D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3B0FC34C-77F9-45FA-8142-F2C39630502D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3B0FC34C-77F9-45FA-8142-F2C39630502D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
